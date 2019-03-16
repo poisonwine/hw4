@@ -5,3 +5,6 @@
 #### 一.空域低通滤波
 #### 1.1 高斯滤波器
 &emsp;&emsp;高斯滤波器是根据高斯函数的形状来选择权值的线性平滑滤波器。高斯平滑滤波器对去除服从正态分布的噪声是很有效果的。一维零均值高斯函数为：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F%E4%B8%80.png"/>
+二维零均值离散高斯函数表达式为：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F2.png"/>
