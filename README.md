@@ -8,3 +8,11 @@
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F%E4%B8%80.png"/>
 二维零均值离散高斯函数表达式为：
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F2.png"/>
+
+&emsp;&emsp;以二维3*3模板为例，假设模板中心点为原点，则模板坐标为：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F4.PNG" height="120"/>
+
+&emsp;&emsp;对应高斯卷积模板的数值为：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F3.PNG" height="120"/>
+
+
