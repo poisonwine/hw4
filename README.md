@@ -15,4 +15,23 @@
 &emsp;&emsp;对应高斯卷积模板的数值为：
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/%E5%85%AC%E5%BC%8F3.PNG" height="120"/>
 
+&emsp;&emsp;可以看出，高斯卷积模板是中心对称的，由此很容易推广到n * n。对于一个n * n的高斯卷积模板，我们可以通过以下步骤计算出值：
+* 给定标准差sigma；
+* 按照二维高斯分布函数计算数值,注意中心点为（(n+1)/2,(n+1)/2）；
+* 归一化
 
+&emsp;&emsp;利用MATLAB编写的主程序如下：
+```
+function tem=gausstemplet(n,sigma)
+b=zeros(n,n)
+n1=floor((n+1)/2);%计算中心
+weight=2*pi*sigma*sigma
+ for i=1:n
+    for j=1:n
+       b(i,j) =exp(-((i-n1)^2+(j-n1)^2)/(2*sigma*sigma))/weight;
+    end
+ end
+ tem=b/sum(b(:))
+ ```
+ &emsp;&emsp;计算出模板的数值，利用卷积函数`conv2`即可计算滤波后的图像。采用不同大小模板进行高斯滤波的结果如下：
+ 
