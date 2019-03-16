@@ -36,3 +36,5 @@ weight=2*pi*sigma*sigma
  &emsp;&emsp;计算出模板的数值，利用卷积函数`conv2`即可计算滤波后的图像。采用不同大小模板进行高斯滤波的结果如下：
  <img src="https://github.com/poisonwine/hw4/blob/master/picture/test1.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_3.png" width="425"/>
  <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_5.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_7.png" width="425"/>
+ <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2.png" width="400"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_3.png" width="400"/>
+  <img src="ttps://github.com/poisonwine/hw4/blob/master/picture/gausstest2_5.png" width="400"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_7.png" width="400"/>
