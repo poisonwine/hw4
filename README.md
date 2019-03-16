@@ -37,4 +37,4 @@ weight=2*pi*sigma*sigma
  <img src="https://github.com/poisonwine/hw4/blob/master/picture/test1.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_3.png" width="425"/>
  <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_5.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest1_7.png" width="425"/>
  <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_3.png" width="425"/>
-  <img src="ttps://github.com/poisonwine/hw4/blob/master/picture/gausstest2_5.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_7.png" width="425"/>
+ <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_5.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/gausstest2_7.png" width="425"/>
