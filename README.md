@@ -58,3 +58,20 @@ weight=2*pi*sigma*sigma
 
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2_3.png" width="425"/>
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2_5.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test2_7.png" width="425"/>
+
+#### 1.3 高斯滤波与中值滤波的对比
+&emsp;&emsp;都选取7*7的模板对`test2`图像进行平滑处理。分别加入高斯白噪声（均值0，方差0.05）和椒盐噪声，实验的效果如下：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/duibi1.png" />
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/duibi2.png" />
+
+&emsp;&emsp;可以观察出，加入高斯白噪声后，高斯滤波的效果要优于中值滤波；加入椒盐噪声后，中值滤波要优于高斯滤波。由此可知，高斯滤波针对分布较规律的噪声效果较好，而中值滤波针对单点噪声效果更好。
+
+#### 二.高通滤波器
+&emsp;&emsp;与低通滤波器相反，高通滤波器允许图像高频部分通过，而高频部分证实图像的边缘信息（或者噪声）,主要用于图像锐化。常用的算子有sobel算子,laplace算子。
+#### 2.1 Unsharp masking
+&emsp;&emsp;反锐化掩膜Unsharp Masking用于增强图像的边缘;算法步骤如下：
+* 模糊原图；
+* 原图减去模糊图，得到Mask；
+* Mask乘以一个正系数kk加到原图上，输出。特别的，k=1时算法称为Unsharp masking。
+
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_unsharp.m`。针对`test3`,`test4`图像的实验效果如下：
