@@ -89,4 +89,7 @@ weight=2*pi*sigma*sigma
 
 #### 2.3 Laplace edge detection
 &emsp;&emsp;Laplacian 算子是n维欧几里德空间中的一个二阶微分算子，定义为梯度的散度。因此如果f是二阶可微的实函数，则f的拉普拉斯算子定义为：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/laplace1.jpg"/>
 
+&emsp;&emsp;为了更适合于数字图像处理，将该方程表示为离散形式： 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/laplace2.jpg"/>
