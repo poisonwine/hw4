@@ -1,6 +1,7 @@
 ## 空域滤波实验报告
 #### 摘要
-&emsp;&emsp;本实验首先利用不同大小的模板，采用中值滤波和高斯低通滤波方法对前两幅图像进行了平滑处理，对比和分析了两种方法和模板大小不同的区别；
+&emsp;&emsp;本实验首先利用不同大小的模板，采用中值滤波和高斯低通滤波方法对前两幅图像进行了平滑处理，对比和分析了两种方法和模板大小不同的区别；针对test2图像，加入高斯白噪声和椒盐噪声，分别用高斯滤波器和中值滤波器对其进行处理，对比和分析了两种滤波器的优缺点。对于图像锐化，采用了
+Unsharp masking, Sobel edge detector, Laplace edge detection和Canny algorithm 对图像进行了实验，对比分析了各算法的优缺点。
 
 #### 一.空域低通滤波
 #### 1.1 高斯滤波器
@@ -93,3 +94,7 @@ weight=2*pi*sigma*sigma
 
 &emsp;&emsp;为了更适合于数字图像处理，将该方程表示为离散形式： 
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/laplace2.jpg"/>
+
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_laplace.m`。针对`test3`,`test4`图像的实验效果如下:
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_laplace.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_laplace.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_laplace.png" width="425"/> 
