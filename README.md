@@ -81,3 +81,11 @@ weight=2*pi*sigma*sigma
 
 #### 2.2 Sobel edge detector
 &emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。两个矩阵如下图所示：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/sobel.png" width="450" height="120"/> 
+
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_sobel.m`。针对`test3`,`test4`图像的实验效果如下：
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_sobel.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_sobel.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_sobel.png" width="425"/> 
+
+#### 2.3 Laplace edge detection
+&emsp;&emsp;Laplacian 算子是n维欧几里德空间中的一个二阶微分算子，定义为梯度的散度。因此如果f是二阶可微的实函数，则f的拉普拉斯算子定义为
