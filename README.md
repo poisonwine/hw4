@@ -74,4 +74,10 @@ weight=2*pi*sigma*sigma
 * 原图减去模糊图，得到Mask；
 * Mask乘以一个正系数kk加到原图上，输出。特别的，k=1时算法称为Unsharp masking。
 
-&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_unsharp.m`。针对`test3`,`test4`图像的实验效果如下：
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_unsharp.m`。针对`test3`,`test4`图像的实验效果如下（局部放大图）：
+
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_unsharp.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_unsharp.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_unsharp.png" width="425"/> 
+
+#### 2.2 Sobel edge detector
+&emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。两个矩阵如下图所示：
