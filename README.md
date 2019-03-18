@@ -98,3 +98,5 @@ weight=2*pi*sigma*sigma
 &emsp;&emsp;MATLAB程序见`源代码.md`中`task2_laplace.m`。针对`test3`,`test4`图像的实验效果如下:
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_laplace.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_laplace.png" width="425"/> 
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_laplace.png" width="425"/> 
+
+#### 2.4 Canny边缘检测
