@@ -1,6 +1,7 @@
 ## 空域滤波实验报告
+#### 自动化66 杨德宇 2161500050
 #### 摘要
-&emsp;&emsp;本实验首先利用不同大小的模板，采用中值滤波和高斯低通滤波方法对前两幅图像进行了平滑处理，对比和分析了两种方法和模板大小不同的区别；针对test2图像，加入高斯白噪声和椒盐噪声，分别用高斯滤波器和中值滤波器对其进行处理，对比和分析了两种滤波器的优缺点。对于图像锐化，采用了
+&emsp;&emsp;本实验首先利用不同大小的模板，采用中值滤波和高斯低通滤波方法对前两幅图像进行了平滑处理，对比和分析了两种方法和模板大小不同的区别；针对test2图像，加入高斯白噪声和椒盐噪声，分别用高斯滤波器和中值滤波器对其进行处理，对比和分析了两种滤波器的优缺点。对于图像锐化和边缘检测，采用了
 Unsharp masking, Sobel edge detector, Laplace edge detection和Canny algorithm 对图像进行了实验，对比分析了各算法的优缺点。
 
 #### 一.空域低通滤波
@@ -86,7 +87,10 @@ weight=2*pi*sigma*sigma
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/sobel.png" width="450" height="120"/> 
 
 &emsp;&emsp;MATLAB程序见`源代码.md`中`task2_sobel.m`。针对`test3`,`test4`图像的实验效果如下。
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_sobel.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_sobel.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_sobel.png" width="600"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_sobel.png" width="600"/> 
+
+&emsp;&emsp;由于Sobel算子是滤波算子的形式，用于提取边缘，可以利用快速卷积函数，简单有效，因此应用广泛。观察图像可以发现，Sobel算子并没有将图像的主体与背景严格地区分开来，换言之就是Sobel算子没有基于图像灰度进行处理，所以提取的图像轮廓有时并不能令人满意。
 
 #### 2.3 Laplace edge detection
 &emsp;&emsp;Laplacian 算子是n维欧几里德空间中的一个二阶微分算子，定义为梯度的散度。因此如果f是二阶可微的实函数，则f的拉普拉斯算子定义为：
@@ -96,8 +100,10 @@ weight=2*pi*sigma*sigma
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/laplace2.jpg"/>
 
 &emsp;&emsp;MATLAB程序见`源代码.md`中`task2_laplace.m`。针对`test3`,`test4`图像的实验效果如下:
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_laplace.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_laplace.png" width="425"/> 
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_laplace.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_laplace.png" width="600"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_laplace.png" width="600"/> 
+
+&emsp;&emsp;拉普拉斯是一种二阶微分算子，其应用强调的是图像中灰度的突变，并不强调灰度级缓慢变化的区域。这将产生把浅灰色边线和突变点叠加到暗色背景中的图像。结合处理后的图像观察，拉普拉斯算子对于test3 的边沿检测较为理想，而对于test4的边缘检测不是很理想，因为test4图片整体处于灰色，所以采用第一种拉普拉斯算子完全没有提取出来边缘，采用第二种拉普拉斯算子稍微好一点，但整体效果也比较差。
 
 #### 2.4 Canny边缘检测
 &emsp;&emsp;Canny边缘检测是一种非常流行的边缘检测算法，是John Canny在1986年提出的。它是一个多阶段的算法，是图像边缘检测算法中最经典、有效的算法之一。它由多个步骤构成：
@@ -107,4 +113,8 @@ weight=2*pi*sigma*sigma
 * 应用双阈值（Double-Threshold）检测来确定真实的和潜在的边缘；
 * 通过抑制孤立的弱边缘最终完成边缘检测。
 
-&emsp;&emsp;
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_laplace.m`。针对`test3`,`test4`图像的实验效果如下:
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_canny.png" width="600"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test4_canny.png" width="600"/> 
+
+&emsp;&emsp;观察图像可以发现，Canny边缘检测的整体效果较好，更多的细节部分能够被检测出来。但是对噪声比较敏感，当加入高斯白噪声后（均值为0，方差为0.002）,虽然大致边缘可以检测出，但在一些地方出现了“假边缘”，故使用此算法需要对图像先进行去噪处理。
