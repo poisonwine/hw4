@@ -75,19 +75,18 @@ weight=2*pi*sigma*sigma
 * 原图减去模糊图，得到Mask；
 * Mask乘以一个正系数kk加到原图上，输出。特别的，k=1时算法称为Unsharp masking。
 
-&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_unsharp.m`。针对`test3`,`test4`图像的实验效果如下（局部放大图）：
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_unsharp.m`。针对`test3`,`test4`图像的实验效果如下。结果得到了边缘更加清晰的图像，与预期改进效果一致。但同时看到也会引进一些不希望看到的噪声。
 
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_unsharp.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_unsharp.png" width="425"/> 
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_unsharp.png" width="425"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_unsharp.png" width="650"/> 
+<img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_unsharp.png" width="650"/> 
 
 #### 2.2 Sobel edge detector
-&emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。若用A表示原始图像，则G(x)和G(y)分别表示经过水平和垂直边缘检测得到的图像灰度值：
+&emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。若用A表示原始图像，则G(x)和G(y)分别表示经过水平和垂直边缘检测得到的图像灰度值，然后我们通过G(x)和G(y)的平方和开根号作为最终图像的灰度值。
+
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/sobel.png" width="450" height="120"/> 
 
-&emsp;&emsp;然后我们通过
-&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_sobel.m`。针对`test3`,`test4`图像的实验效果如下：
+&emsp;&emsp;MATLAB程序见`源代码.md`中`task2_sobel.m`。针对`test3`,`test4`图像的实验效果如下。
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_sobel.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_sobel.png" width="425"/> 
-<img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_sobel.png" width="425"/> 
 
 #### 2.3 Laplace edge detection
 &emsp;&emsp;Laplacian 算子是n维欧几里德空间中的一个二阶微分算子，定义为梯度的散度。因此如果f是二阶可微的实函数，则f的拉普拉斯算子定义为：
