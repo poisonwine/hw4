@@ -81,9 +81,10 @@ weight=2*pi*sigma*sigma
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_unsharp.png" width="425"/> 
 
 #### 2.2 Sobel edge detector
-&emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。两个矩阵如下图所示：
+&emsp;&emsp;Sobel算子也叫 Sobel 滤波, 是两个 3*3 的矩阵, 主要用来计算图像中某一点在横向/纵向上的梯度,。若用A表示原始图像，则G(x)和G(y)分别表示经过水平和垂直边缘检测得到的图像灰度值：
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/sobel.png" width="450" height="120"/> 
 
+&emsp;&emsp;然后我们通过
 &emsp;&emsp;MATLAB程序见`源代码.md`中`task2_sobel.m`。针对`test3`,`test4`图像的实验效果如下：
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test3_sobel.png" width="425"/> <img src="https://github.com/poisonwine/hw4/blob/master/picture/test41_sobel.png" width="425"/> 
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_sobel.png" width="425"/> 
@@ -100,3 +101,11 @@ weight=2*pi*sigma*sigma
 <img src="https://github.com/poisonwine/hw4/blob/master/picture/test42_laplace.png" width="425"/> 
 
 #### 2.4 Canny边缘检测
+&emsp;&emsp;Canny边缘检测是一种非常流行的边缘检测算法，是John Canny在1986年提出的。它是一个多阶段的算法，是图像边缘检测算法中最经典、有效的算法之一。它由多个步骤构成：
+* 使用高斯滤波器，以平滑图像，滤除噪声；
+* 计算图像中每个像素点的梯度强度和方向;
+* 应用非极大值（Non-Maximum Suppression）抑制，以消除边缘检测带来的杂散响应。有多个像素宽的边缘变成一个单像素宽的边缘。即“胖边缘”变成“瘦边缘”；
+* 应用双阈值（Double-Threshold）检测来确定真实的和潜在的边缘；
+* 通过抑制孤立的弱边缘最终完成边缘检测。
+
+&emsp;&emsp;
